@@ -55,6 +55,10 @@ app.get("/", (req, res) => {
 
 app.post("/api/fetchList", (req, res, next) => {
   // console.log(`The data received ${JSON.parse(req.body.keyed)}`);
+  if (req.body.keyed === null) {
+    pattern = "^";
+    resultingHeroes = Object.assign([], heroesList);
+  }
   req.body.keyed && callHero(req.body.keyed);
   // callHero(res.body)
   res.status(200).json(resultingHeroes);
