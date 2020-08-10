@@ -47,7 +47,7 @@ function App() {
         setInput={clearInput}
       />
       <div className="vl"></div>
-      <Heroes heroes={heroes} />
+      <Heroes heroes={heroes} clear={clearInput} />
     </div>
   );
 }

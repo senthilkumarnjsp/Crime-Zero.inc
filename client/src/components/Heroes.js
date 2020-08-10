@@ -1,6 +1,6 @@
 import React from "react";
 
-const Heroes = ({ heroes }) => {
+const Heroes = ({ heroes, clear }) => {
   //   console.log(`Heroes length is ${heroes.length}`);
   return (
     <div className="heroes-group">
@@ -11,10 +11,19 @@ const Heroes = ({ heroes }) => {
           </div>
         ))
       ) : (
-        <h2>
-          No hero code matched!
-          <br /> Clear input and try again
-        </h2>
+        <>
+          <h2>
+            No hero code matched!
+            <br /> Clear input and try again
+          </h2>
+          <button
+            className="number-key"
+            onClick={clear}
+            style={{ fontSize: 25 }}
+          >
+            Clear
+          </button>
+        </>
       )}
     </div>
   );

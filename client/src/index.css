@@ -27,6 +27,11 @@ code {
   color: white;
 }
 
+.App-header h1 {
+  padding: 10px;
+  border: 7px groove salmon;
+}
+
 #input_container {
   position: relative;
   margin: 0 30px;
@@ -41,9 +46,12 @@ code {
   color: azure;
   text-align: center;
   font-size: 1.5rem;
+  padding: 5px 0px;
+  font-family: "Times New Roman", Times, serif;
   /* border: 2px solid salmon; */
   border-color: salmon;
   border-width: 0px 0px 3px 0px;
+  /* border-width: 3px; */
   border-style: groove;
   margin: 0;
   width: 100%;
@@ -77,9 +85,13 @@ code {
 
 .number-key {
   width: 100px;
-  background-color: azure;
+  background-color: #282c34;
   margin: 10px 5px;
   padding: 5px;
+  border-radius: 5px;
+  border: 2px solid saddlebrown;
+  color: azure;
+  cursor: pointer;
 }
 
 .vl {

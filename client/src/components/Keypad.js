@@ -23,6 +23,7 @@ const Keypad = ({ inputString, fetchData, setInput }) => {
           <input
             type="text"
             className="input-field"
+            placeholder="Input will be shown here"
             readOnly
             value={inputString}
           />
