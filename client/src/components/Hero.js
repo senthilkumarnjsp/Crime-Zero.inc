@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const Hero = (props) => {
   const [logo, setLogo] = useState("");
+  // {method responsible for fetching the corresponding logo of the hero selected}
   useEffect(() => {
     const fetchLogo = async () => {
       const result = await fetch("http://localhost:2770/api/fetchHero", {
@@ -16,6 +17,7 @@ const Hero = (props) => {
     };
     fetchLogo();
   });
+
   return (
     <>
       <div className="hero-style">

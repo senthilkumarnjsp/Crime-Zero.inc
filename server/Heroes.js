@@ -1,3 +1,4 @@
+// list of heroes
 const heroesList = [
   "SUPERMAN",
   "THOR",

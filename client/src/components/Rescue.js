@@ -6,6 +6,7 @@ const Rescue = (props) => {
   const [heroes, setHeroes] = useState([]);
   let [inputString, setInputString] = useState("");
   const [disable, setDisable] = useState(true);
+  // {List of disabled keys}
   let [disabledKeys, setDisabledKeys] = useState([
     1,
     2,
@@ -26,6 +27,7 @@ const Rescue = (props) => {
 
   let inputValue = "";
 
+  // {Method to fetch heroes list depending on the key stroke}
   const fetchData = async (keyed = null) => {
     inputValue = {
       keyed: keyed === "#" || keyed === "*" ? 0 : keyed,
@@ -48,6 +50,7 @@ const Rescue = (props) => {
       inputString += String(keyed);
     }
     setInputString(inputString);
+    // {fetch API to the end point /api/fetchList to retrieve the data}
     const result = await fetch("http://localhost:2770/api/fetchList", {
       method: "post",
       headers: {
@@ -59,6 +62,7 @@ const Rescue = (props) => {
     setHeroes(data);
   };
 
+  // {Method to enable buttons depending on the key strokes}
   const enableButtons = (keyed) => {
     let disabledButtons = [...disabledKeys];
     if (keyed === 0) {
@@ -77,12 +81,14 @@ const Rescue = (props) => {
     fetchData(keyed);
   };
 
+  // {Method to disable the buttons again when clearing inputs}
   const disableButtons = () => {
     let disabledButtons = [1, 2, 3, 4, 5, 6, 7, 8, 9, "*", "#"];
     setDisabledKeys(() => disabledButtons);
     setDisable(true);
   };
 
+  // {Method to clear the input}
   const clearInput = () => {
     disableButtons();
     inputString = "";
@@ -92,6 +98,7 @@ const Rescue = (props) => {
 
   return (
     <>
+      {/* {Responsible for rendering keypad} */}
       <Keypad
         inputString={inputString}
         setInput={clearInput}
@@ -100,6 +107,7 @@ const Rescue = (props) => {
         disabledKeys={disabledKeys}
       />
       <div className="vl"></div>
+      {/* {Responsible for rendering Heroes list} */}
       <Heroes heroes={heroes} clear={clearInput} />
     </>
   );

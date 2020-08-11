@@ -3,6 +3,7 @@ const routes = require("express").Router();
 const heroesList = require("../Heroes");
 const heroesLogo = require("../HeroesLogo");
 
+// constants to form regex
 const regEx = {
   "1": "[@.?]",
   "2": "[abc]",
@@ -18,6 +19,7 @@ const regEx = {
 let regExp;
 let pattern = "^";
 
+// Method to filter the heroes list with each key stroke
 const callHero = (input) => {
   pattern += regEx[input];
   regExp = new RegExp(pattern, "i");
@@ -26,11 +28,13 @@ const callHero = (input) => {
 
 let resultingHeroes = Object.assign([], heroesList);
 
+// API endpoint (route) to hit when front end is making it to the result
 routes.post("/fetchHero", (req, res, next) => {
   const logo = heroesLogo[req.body.heroForRescue];
   res.status(200).json(logo);
 });
 
+// API endpoint (route) to hit when front end is requesting the list with the key stroke
 routes.post("/fetchList", (req, res, next) => {
   if (req.body.keyed === null) {
     pattern = "^";

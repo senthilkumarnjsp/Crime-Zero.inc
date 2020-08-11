@@ -1,3 +1,4 @@
+// logos of each heroes
 const logos = {
   SUPERMAN: "https://img.icons8.com/officexs/480/000000/superman.png",
   BATMAN: "https://img.icons8.com/color/480/000000/batman-new.png",
@@ -7,8 +8,6 @@ const logos = {
   IRONMAN: "https://img.icons8.com/color/480/000000/iron-man.png",
   GHOSTRIDER:
     "https://www.pngkit.com/png/full/326-3264039_-png-png-fire-flames.png",
-  // "https://www.pngkit.com/png/full/125-1250262_skull-on-fire-png.png",
-  // "https://www.pngkit.com/png/full/131-1319075_ghost-rider-volume-2-logo-recreated-with-photoshop.png",
   CAPTAINAMERICA:
     "https://img.icons8.com/officel/480/000000/captain-america.png",
   FLASH: "https://img.icons8.com/color/480/000000/the-flash-sign--v1.png",

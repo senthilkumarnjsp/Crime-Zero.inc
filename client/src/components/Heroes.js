@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 
 const Heroes = ({ heroes, clear, ...props }) => {
+  // {Method to navigate to the result page}
   const callHero = (hero) => {
     props.match.params.heroForRescue = hero;
     props.history.push(`/${hero}`);
@@ -9,6 +10,7 @@ const Heroes = ({ heroes, clear, ...props }) => {
 
   return (
     <div className="heroes-group">
+      {/* {Method to display the list of heroes depending on the key strokes} */}
       {heroes.length ? (
         heroes.map((hero) => (
           <div

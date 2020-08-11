@@ -7,6 +7,7 @@ const Keypad = ({
   disable,
   disabledKeys,
 }) => {
+  // {Keypad values}
   const keyboard = {
     "+1": "@.?",
     "+2": "ABC",
@@ -26,6 +27,7 @@ const Keypad = ({
     <>
       <div className="button-group">
         <div id="input_container">
+          {/* {Readonly input field to display the input} */}
           <input
             type="text"
             className="input-field"
@@ -33,6 +35,7 @@ const Keypad = ({
             readOnly
             value={inputString}
           />
+          {/* {Icon to clear input that was provided earlier} */}
           {inputString && (
             <i onClick={() => setInput()} className="icon">
               &times;
@@ -40,6 +43,7 @@ const Keypad = ({
           )}
         </div>
         <div className="numpad">
+          {/* {Method to render keypad with disabled keys} */}
           {Object.keys(keyboard).map((keyValue, index) => {
             return (
               <React.Fragment key={index}>
@@ -65,6 +69,7 @@ const Keypad = ({
               </React.Fragment>
             );
           })}
+          {/* {Instructions to the end user} */}
           <p
             style={{
               display: disable ? "block" : "none",

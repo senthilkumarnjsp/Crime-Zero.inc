@@ -1,0 +1,23 @@
+{
+  "name": "Crime-Zero.inc",
+  "version": "1.0.0",
+  "description": "Assessment for FullStack Developer | Ownerstown",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "(cd client && npm intall) && (cd server && npm install)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senthilkumarnjsp/Crime-Zero.inc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/senthilkumarnjsp/Crime-Zero.inc/issues"
+  },
+  "homepage": "https://github.com/senthilkumarnjsp/Crime-Zero.inc#readme"
+}
