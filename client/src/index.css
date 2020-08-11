@@ -18,7 +18,6 @@ code {
 }
 
 .App-header {
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,19 +26,30 @@ code {
   color: white;
 }
 
+.App-header a {
+  text-decoration: none;
+  cursor: pointer;
+  color: azure;
+}
+
 .App-header h1 {
   padding: 10px;
   border: 7px groove salmon;
 }
 
+.button-group {
+  width: 50%;
+  height: auto;
+  display: block;
+  float: left;
+}
+
 #input_container {
   position: relative;
   margin: 0 30px;
-  direction: rtl;
 }
 
 .input-field {
-  /* width: 315px; */
   height: 25px;
   outline: none;
   background-color: #282c34;
@@ -48,10 +58,8 @@ code {
   font-size: 1.5rem;
   padding: 5px 0px;
   font-family: "Times New Roman", Times, serif;
-  /* border: 2px solid salmon; */
   border-color: salmon;
   border-width: 0px 0px 3px 0px;
-  /* border-width: 3px; */
   border-style: groove;
   margin: 0;
   width: 100%;
@@ -65,26 +73,22 @@ code {
   width: 24px;
   height: 24px;
   cursor: pointer;
+  font-size: 25px;
 }
 
-.button-group {
-  /* display: flex; */
-  /* flex-flow: column; */
-  width: 50%;
-  height: auto;
-  display: block;
-  float: left;
-  /* border: 2px solid salmon; */
-}
-
-@media (max-width: 660px) {
+@media (max-width: 750px) {
   .button-group {
     width: 100%;
+    margin-bottom: 30px;
   }
 }
 
+.numpad {
+  text-align: center;
+}
+
 .number-key {
-  width: 100px;
+  min-width: 100px;
   background-color: #282c34;
   margin: 10px 5px;
   padding: 5px;
@@ -92,6 +96,12 @@ code {
   border: 2px solid saddlebrown;
   color: azure;
   cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  border: 2px solid gray;
+  color: gray;
 }
 
 .vl {
@@ -103,7 +113,7 @@ code {
   top: auto;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 750px) {
   .vl {
     display: none;
   }
@@ -114,9 +124,10 @@ code {
   height: auto;
   display: block;
   float: right;
+  text-align: center;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 750px) {
   .heroes-group {
     width: 100%;
   }
@@ -126,15 +137,30 @@ code {
   color: azure;
 }
 
-.hero-style {
+.heroes-style {
   display: inline-block;
   color: azure;
   border: 3px solid saddlebrown;
   margin: 10px;
   padding: 10px;
   overflow-x: auto;
+  cursor: pointer;
 }
 
 .hero-style h3 {
   font-size: 1rem;
+}
+
+.hero-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.hero-style h2,
+.hero-style p {
+  margin: 10px;
 }

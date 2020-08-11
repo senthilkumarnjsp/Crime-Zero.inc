@@ -1,12 +1,21 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
-const Heroes = ({ heroes, clear }) => {
-  //   console.log(`Heroes length is ${heroes.length}`);
+const Heroes = ({ heroes, clear, ...props }) => {
+  const callHero = (hero) => {
+    props.match.params.heroForRescue = hero;
+    props.history.push(`/${hero}`);
+  };
+
   return (
     <div className="heroes-group">
       {heroes.length ? (
         heroes.map((hero) => (
-          <div key={hero} className="hero-style">
+          <div
+            key={hero}
+            onClick={() => callHero(hero)}
+            className="heroes-style"
+          >
             <h3>{hero}</h3>
           </div>
         ))
@@ -29,4 +38,4 @@ const Heroes = ({ heroes, clear }) => {
   );
 };
 
-export default Heroes;
+export default withRouter(Heroes);
