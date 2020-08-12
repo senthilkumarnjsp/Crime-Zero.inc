@@ -2,7 +2,7 @@
 
 Assessment for FullStack Developer | Ownerstown
 
-## What is the use of this Repository
+## What is this Repository
 
 This Project is a Simple MERN Stack Project which demonstrates the following
 
@@ -16,10 +16,12 @@ This Project is a Simple MERN Stack Project which demonstrates the following
 
 This project has been created as an Assessment for FullStack Developer
 
+---
+
 ## Description about the project
 
 The time is set in a dystopian future when crime is a global issue. Crime Zero Inc. sets up a SMS
-service where you type in 0 <space> <code> to call for a super hero for rescue. You are assigned
+service where you type in 0 < space > < code > to call for a super hero for rescue. You are assigned
 the job of developing a system that reads this code and translates into possible names of super
 heroes so that Crime Zero Inc. can send a distress signal to alarm your savior.
 The program should map the standard telephone keypad numbers to corresponding letters with the
@@ -51,6 +53,8 @@ SUPERMAN THOR ROBIN IRONMAN GHOSTRIDER CAPTAINAMERICA FLASH WOLVERINE
 BATMAN HULK BLADE PHANTOM SPIDERMAN BLACKWIDOW HELLBOY PUNISHER
 ```
 
+---
+
 ## Prerequisites
 
 ### Install Node JS
@@ -70,6 +74,8 @@ or you can use the shorthand
 ```bash
 npm i -g create-react-app
 ```
+
+---
 
 ## Cloning and Running the Application in local
 
@@ -100,6 +106,8 @@ npm run start
 ```
 
 The React application runs on **localhost:3000** and the Node server runs on **localhost:2770**
+
+---
 
 ## Dependencies
 
@@ -134,3 +142,5 @@ The React application runs on **localhost:3000** and the Node server runs on **l
 #### HTTP client
 
 **fetch** builtin library to make http calls
+
+---
