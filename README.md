@@ -1,6 +1,6 @@
 # Crime-Zero.inc
 
-Assessment for FullStack Developer | Ownerstown
+Assessment for FullStack Developer
 
 ## What is this Repository
 
