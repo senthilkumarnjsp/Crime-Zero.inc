@@ -31,10 +31,13 @@ E.g.:
 4855 generates the following combination of words: [gvlj, htkl, itlj, hulk, gtjj, hvlk, …]
 Out of the 81 combinations, only hulk is a valid name. This is arrived by mapping numbers to
 letters in the following manner:
+
+```
 4 – h
 8 – u
 5 – l
 5 – k
+```
 
 ### How to call a super hero for rescue
 
